@@ -30,11 +30,27 @@ for i in range(1, 11):
         print(i, "是奇數")
 
 # 九九乘法表
-
+print("\n=== 九九乘法表 ===")
 for i in range(1, 10):      # 1 到 9
     for j in range(1, 10):  # 1 到 9
-        print(i, "x", j, "=", i*j)
-    print("---")  # 分隔線
+        print(f"{i} x {j} = {i*j:2d}", end="  ")  # 使用 f-string 和格式化
+    print()  # 換行
+
+# 學習函數 (Functions)
+# 函數是可以重複使用的程式碼區塊
+
+def print_multiplication_table():
+    """列印九九乘法表的函數"""
+    print("\n=== 函數版本的九九乘法表 ===")
+    for i in range(1, 10):      # 1 到 9
+        for j in range(1, 10):  # 1 到 9
+            print(f"{i} x {j} = {i*j:2d}", end="  ")
+        print()  # 換行
+
+# 呼叫函數來執行
+print_multiplication_table()
+
+# TODO(human) - 接下來練習建立有參數的函數
 
 # 計算字串長度
 
